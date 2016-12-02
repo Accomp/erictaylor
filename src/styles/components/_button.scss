@@ -1,0 +1,31 @@
+/**
+ * @component button
+ * @description Button component
+ * -----------------------------------------------------------------------------
+ */
+
+.c-button {
+  background: map-get($colors, brand-1);
+  border-width: 0 0 4px;
+  border-radius: 4px;
+  color: map-get($colors, white);
+  display: inline-block;
+  font-size: 1.143em; // 14 > 16
+  font-weight: 400;
+  padding: map-get($spacing, sm) map-get($spacing, med) (map-get($spacing, sm) - 2px);
+  transition: all .2s linear;
+
+  &:hover {
+    background-color: map-get($colors, gray--dark);
+  } // &:hover
+
+  &--full {
+    width: 100%;
+  } // &--full
+
+  .c-button__icon {
+    margin-left: 10px;
+    position: relative;
+    top: 3px;
+  } // .c-button__icon
+} // .c-button

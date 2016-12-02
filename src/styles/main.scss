@@ -3,7 +3,6 @@
 // --------------------------------------------------
 
 @import "settings/variables";
-@import "settings/functions";
 @import "settings/mixins";
 
 //
@@ -14,25 +13,33 @@
 @import "core/base";
 
 //
-// Objects
+// Layout
 // --------------------------------------------------
 
-@import "objects/sample";
+@import "layout/footer";
+@import "layout/header";
+@import "layout/main";
+@import "layout/wrapper";
 
 //
 // Utilities
 // --------------------------------------------------
 
-@import "utilities/sample";
+@import "utilities/wrapper";
 
 //
 // Components
 // --------------------------------------------------
 
-@import "components/sample";
+@import "components/button";
+@import "components/intro";
+@import "components/portfolio";
+@import "components/portfolio-item";
+@import "components/experience";
+@import "components/social";
 
 //
 // Themes
 // --------------------------------------------------
 
-@import "themes/sample";
+@import "themes/christmas";

@@ -1,12 +1,253 @@
-/**
- * Core: Base
- * -----------------------------------------------------------------------------
- */
+//
+// Base: Scaffolding
+// --------------------------------------------------
+
+// scss-lint:disable SelectorFormat, SingleLinePerSelector
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+::selection {
+  background: map-get($colors, brand-1);
+  color: map-get($colors, white);
+}
 
 body {
-  position: relative;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background: map-get($colors, white);
+  color: map-get($colors, black);
+  font-family: map-get($fonts, sans-serif), sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.428; // 14 > 20
   text-rendering: optimizeSpeed;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
 }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: map-get($fonts, sans-serif), sans-serif;
+  font-weight: 400;
+  margin: 1em 0 .5em;
+}
+
+h1 {
+  font-size: 2.285em; // 14 > 32
+  line-height: 1.312; // 32 > 42
+}
+
+h2 {
+  border-bottom: 1px solid map-get($colors, brand-1);
+  display: inline-block;
+  font-size: 2.286em; // 14 > 32
+  font-weight: 300;
+  line-height: 1.166; // 24 > 28
+  margin: 1em 0;
+  padding: 0 30px 30px;
+}
+
+h3 {
+  font-size: 1em; // 14
+}
+
+h4 {
+  font-size: 1em; // 14
+}
+
+h5 {
+  font-size: 1em; // 14
+}
+
+h6 {
+  font-size: 1em; // 14
+  text-transform: uppercase;
+}
+
+p, ul, ol, dl, table {
+  margin: .85em 0;
+}
+
+em, i {
+  font-style: italic;
+}
+
+strong, b {
+  font-weight: 600;
+}
+
+a {
+  border-bottom: 1px solid map-get($colors, brand-1);
+  color: map-get($colors, brand-1);
+  text-decoration: none;
+  transition: all .2s linear;
+
+  &:hover {
+    background-color: map-get($colors, brand-1);
+    color: map-get($colors, white);
+  }
+}
+
+img {
+  display: block;
+  height: auto;
+  margin: 0 auto;
+  max-height: 100%;
+  max-width: 100%;
+  width: auto;
+}
+
+figure {
+  border: 1px solid #333;
+  display: inline-block;
+  margin: .85em 0;
+  padding: map-get($spacing, sm);
+  width: auto;
+}
+
+figcaption {
+  border-top: 1px solid #333;
+  margin: -(map-get($spacing, sm));
+  margin-top: map-get($spacing, sm);
+  padding: (map-get($spacing, sm) / 2) map-get($spacing, sm);
+  text-align: center;
+}
+
+ul {
+  list-style: disc;
+  padding-left: 18px;
+
+  ul {
+    list-style: circle;
+  }
+}
+
+ol {
+  list-style: decimal;
+  padding-left: 20px;
+
+  ol {
+    list-style: lower-alpha;
+  }
+}
+
+li {
+  margin: .5em 0;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+dl {
+  border-top: 1px solid #333;
+}
+
+dt {
+  font-weight: 700;
+}
+
+blockquote {
+  border-left: 3px solid #333;
+  padding: 0 map-get($spacing, sm);
+
+  footer {
+    font-style: italic;
+  }
+}
+
+caption {
+  margin: .5em 0;
+}
+
+table {
+  border: #333;
+  text-align: left;
+  width: 100%;
+}
+
+tr {
+  border-bottom: 1px solid #333;
+}
+
+td {
+  padding: 10px;
+}
+
+th {
+  color: #333;
+  font-size: .857em; // 14 > 12
+  font-weight: 700;
+  padding: 10px;
+}
+
+tfoot tr {
+  border-bottom: 0;
+}
+
+fieldset {
+  @include clearfix();
+}
+
+legend {
+  border-bottom: 1px solid #333;
+  font-size: 1.5em; //14 > 21
+  font-weight: 700;
+  width: 100%;
+}
+
+label {
+  font-size: .928em; // 14 > 13
+}
+
+input {
+
+  &[type=search],
+  &[type=text],
+  &[type=email],
+  &[type=password],
+  &[type=number],
+  &[type=tel],
+  &[type=url] {
+    -webkit-appearance: none;
+    border: 1px solid #333;
+    border-radius: 4px;
+    display: block;
+    font-size: 1.143em; // 14 > 16
+    height: 35px;
+    padding: 0 10px;
+    width: 100%;
+  }
+
+  &[type=submit] {
+  } // &[type=submit]
+} // input
+
+textarea {
+  -webkit-appearance: none;
+  border: 1px solid #333;
+  border-radius: 4px;
+  display: block;
+  font-size: 1.143em; // 14 > 16
+  padding: 10px;
+  width: 100%;
+} // textarea
+
+select {
+  display: block;
+  font-size: 1.143em; // 14 > 16
+} // select
+
+button {
+  display: inline-block;
+  font-size: 1em; // 14
+  margin: .85em 0;
+} // button
+
+address {
+  display: inline;
+} // address
+
+// scss-lint:lint:enable SelectorFormat, SingleLinePerSelector

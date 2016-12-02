@@ -1,0 +1,51 @@
+/**
+ * @component social
+ * @description Social component
+ * -----------------------------------------------------------------------------
+ */
+
+.c-social {
+  background: map-get($colors, gray--light);
+  padding: 50px 0 60px;
+  text-align: center;
+
+  .c-social__title {
+    margin-bottom: 30px;
+  } // .c-social__title
+
+  .c-social__list {
+    list-style: none;
+    margin: 0 0 30px;
+    padding: 0;
+  } // .c-social__list
+
+  .c-social__list-item {
+    display: inline-block;
+    margin: 0 10px;
+  } // .c-social__list-item
+
+  .c-social__link {
+    background: map-get($colors, gray);
+    border: 0;
+    border-radius: 50%;
+    color: map-get($colors, white);
+    display: block;
+    height: 50px;
+    overflow: hidden;
+    transition: all .2s linear;
+    width: 50px;
+
+    &:hover {
+      background-color: map-get($colors, gray--dark);
+    } // &:hover
+  } // .c-social__link
+
+  .c-social__network-name {
+    @include visually-hide();
+  } // .c-social__network-name
+
+  .c-social__network-icon {
+    font-size: 2.143em; // 14 > 30
+    line-height: 50px;
+  } // .c-social__network-icon
+} // .c-social

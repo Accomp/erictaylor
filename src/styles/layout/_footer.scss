@@ -1,0 +1,19 @@
+/**
+ * @layout footer
+ * @description Site footer
+ * -----------------------------------------------------------------------------
+ */
+
+.l-footer {
+  background: map-get($colors, gray--dark);
+  color: map-get($colors, white);
+  font-weight: 400;
+  padding: map-get($spacing, med);
+
+  .l-footer__text {
+    font-size: .857em; // 14 > 12
+    line-height: 2; // 12 > 24
+    margin: 0;
+    text-align: center;
+  } // .l-footer__text
+} // .l-footer

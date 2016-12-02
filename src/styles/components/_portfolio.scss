@@ -1,0 +1,92 @@
+/**
+ * @component portfolio
+ * @description Portfolio component
+ * -----------------------------------------------------------------------------
+ */
+
+.c-portfolio {
+  background: map-get($colors, gray--light);
+  padding: 60px 0 50px;
+  text-align: center;
+
+  .c-portfolio__title {
+    border-bottom: 1px solid map-get($colors, brand-1);
+    display: inline-block;
+    font-size: 2.286em; // 14 > 32
+    font-weight: 300;
+    padding: 0 30px 30px;
+  } // .c-portfolio__title
+
+  .c-portfolio__description {
+    font-size: 1.286em; // 14 > 18
+    line-height: 1.667; // 18 > 30
+    margin: 0 auto 30px;
+    max-width: 600px;
+    text-align: center;
+  } // .c-portfolio__description
+
+  .c-portfolio__list {
+    list-style: none;
+    margin: 0 auto;
+    max-width: 400px;
+    padding: 20px 0 0;
+
+    @include mq(sm) {
+      @include clearfix();
+      max-width: 940px;
+    } // mq.sm
+  } // .c-portfolio__list
+
+  .c-portfolio__list-item {
+    margin: 0 0 40px;
+    position: relative;
+
+    @include mq(sm) {
+      float: left;
+      margin-bottom: 8%;
+      width: 46%;
+    } // mq.sm
+
+    @include mq(med) {
+      margin-bottom: 5%;
+      width: 30%;
+    } // mq.med
+
+    &:nth-child(even) {
+
+      @include mq(sm) {
+        float: right;
+      } // mq.sm
+
+      @include mq(med) {
+        float: left;
+      } // mq.med
+    } // &:nth-child(odd)
+
+    &:nth-child(3n+2) {
+
+      @include mq(med) {
+        margin: 0 5% 5%;
+      } // mq.med
+    } // &:nth-child(3n+2)
+
+    &:hover {
+
+      &:before {
+        background-color: map-get($colors, brand-1);
+      } // &:before
+    } // &:hover
+
+    &:before {
+      background: rgba(map-get($colors, black), .25);
+      content: "";
+      display: block;
+      height: 100%;
+      left: 4px;
+      position: absolute;
+      top: 4px;
+      transition: all .2s linear;
+      width: 100%;
+    } // &:before
+  } // .c-portfolio__list-item
+} // .c-portfolio
