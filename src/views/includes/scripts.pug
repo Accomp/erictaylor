@@ -1,10 +1,4 @@
 //- JavaScript
 script(src='https://use.fontawesome.com/6451a31339.js')
-case env
-  when "dev"
-    script(src="/vendors/bundle.js")
-    script(src="/scripts/main.js")
-  when "stage"
-  when "prod"
-    script(src="/vendors/bundle.min.js")
-    script(src="/scripts/main.min.js")
+script(src='/vendors/bundle.min.js')
+script(src='/scripts/main.min.js')

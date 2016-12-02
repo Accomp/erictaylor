@@ -3,7 +3,7 @@ include ../mixins/sample
 
 block variables
   - var title = "Eric Taylor - UX Engineer";
-  - var description = "Hybrid Front-End Developer and UX Designer.";
+  - var description = "Hybrid Front-End Developer and UX Critic.";
 
 block content
   div(class='l-wrapper')
@@ -28,8 +28,8 @@ block content
       div(class='c-intro')
         div(class='u-wrapper')
           h2(class='c-intro__title')
-            span(class='c-intro__title-accent') Front-End Developer. 
-            | <br />UX Designer. <br />Thinker.
+            span(class='c-intro__title-accent') UX Engineer. 
+            | <br />Front-End Development. <br />User Experience.
         // Intro image credit: http://imgur.com/gallery/SELjK
       section(class='c-portfolio')
         div(class='u-wrapper')
@@ -149,7 +149,7 @@ block content
               a(href='https://www.linkedin.com/in/ericbtaylorjr', title='View Eric\'s LinkedIn', class='c-social__link', target='_blank')
                 span(class='c-social__network-name') LinkedIn
                 i(class='fa fa-linkedin c-social__network-icon', aria-hidden='true')
-    footer(class='l-footer')
+    footer(class='l-footer', role='contentinfo')
       div(class='u-wrapper')
         p(class='l-footer__text')
           | &copy; 

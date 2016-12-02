@@ -1,22 +1,22 @@
 {
-  "name": "web-starter-kit",
-  "title": "Web starter Kit",
-  "description": "Web Starter Kit",
-  "version": "0.0.0",
-  "homepage": "http://www.domain.com",
+  "name": "eric-taylor",
+  "title": "Eric Taylor",
+  "description": "Home of UX Engineer, Eric Taylor",
+  "version": "1.0.0",
+  "homepage": "http://www.etaylor.io",
   "author": {
-    "name": "Company",
-    "url": "http://www.company.com"
+    "name": "Eric Taylor",
+    "url": "http://www.etaylor.io"
   },
   "contributors": [
     {
-      "name": "Name",
-      "email": "alias@company.com"
+      "name": "Eric Taylor",
+      "email": "exaltedsolutions@gmail.com"
     }
   ],
   "repository": {
     "type": "git",
-    "url": "git@github.com:USER/REPOSITORY.git"
+    "url": "git@github.com:accomp/erictaylor.git"
   },
   "license": "MIT",
   "devDependencies": {
