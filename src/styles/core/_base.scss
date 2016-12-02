@@ -1,6 +1,6 @@
-//
-// Base: Scaffolding
-// --------------------------------------------------
+////
+/// Base: Scaffolding
+////
 
 // scss-lint:disable SelectorFormat, SingleLinePerSelector
 html {
@@ -21,11 +21,11 @@ body {
   color: map-get($colors, black);
   font-family: map-get($fonts, sans-serif), sans-serif;
   font-size: 14px;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
   font-weight: 300;
   line-height: 1.428; // 14 > 20
   text-rendering: optimizeSpeed;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -220,9 +220,6 @@ input {
     padding: 0 10px;
     width: 100%;
   }
-
-  &[type=submit] {
-  } // &[type=submit]
 } // input
 
 textarea {

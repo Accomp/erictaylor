@@ -1,8 +1,7 @@
-/**
- * @component portfolio
- * @description Portfolio component
- * -----------------------------------------------------------------------------
- */
+////
+/// @component portfolio
+/// @description Portfolio component
+////
 
 .c-portfolio {
   background: map-get($colors, gray--light);
@@ -79,7 +78,7 @@
 
     &:before {
       background: rgba(map-get($colors, black), .25);
-      content: "";
+      content: '';
       display: block;
       height: 100%;
       left: 4px;

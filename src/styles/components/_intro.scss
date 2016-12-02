@@ -1,8 +1,7 @@
-/**
- * @component intro
- * @description Intro component
- * -----------------------------------------------------------------------------
- */
+////
+/// @component intro
+/// @description Intro component
+////
 
 .c-intro {
   background: map-get($colors, gray--dark) url('/images/bg-intro_forest--mobile.jpg') left bottom no-repeat;

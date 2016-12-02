@@ -1,8 +1,7 @@
-/**
- * @layout header
- * @description Site header
- * -----------------------------------------------------------------------------
- */
+////
+/// @layout header
+/// @description Site header
+////
 
 .l-header {
   @include clearfix();
@@ -19,7 +18,7 @@
   .l-header__title {
     color: map-get($colors, black);
     float: left;
-    font-size: 1em; // 14 >
+    font-size: 1em; // 14
     margin: 0;
     padding: map-get($spacing, sm) map-get($spacing, sm) map-get($spacing, sm) 44px;
     position: relative;
@@ -28,7 +27,7 @@
       background: url('/images/avatar-small.jpg') no-repeat left center;
       background-size: 34px 34px;
       border-radius: 50%;
-      content: "";
+      content: '';
       display: block;
       height: 34px;
       left: 0;
@@ -114,11 +113,11 @@
 
     &:hover {
 
-        @include mq(sm) {
-          background: none;
-          border-color: map-get($colors, brand-1);
-          color: map-get($colors, brand-1);
-        } // mq.sm
+      @include mq(sm) {
+        background: none;
+        border-color: map-get($colors, brand-1);
+        color: map-get($colors, brand-1);
+      } // mq.sm
     } // &:hover
   } // .l-header__navigation-link
 
@@ -143,14 +142,14 @@
 
     &:before {
       border-radius: 50%;
-      content: "";
+      content: '';
       display: block;
-      left: 50%;
       height: 0;
+      left: 50%;
       opacity: 0;
       position: absolute;
       top: 50%;
-      transform: translate(-50%,-50%);
+      transform: translate(-50%, -50%);
       transition: all .4s ease;
       width: 0;
     } // &:before
@@ -191,7 +190,7 @@
 
     &:before {
       background: map-get($colors, brand-1);
-      content: "";
+      content: '';
       display: block;
       height: 2px;
       position: absolute;
@@ -203,7 +202,7 @@
     &:after {
       background: map-get($colors, brand-1);
       bottom: -6px;
-      content: "";
+      content: '';
       display: block;
       height: 2px;
       position: absolute;

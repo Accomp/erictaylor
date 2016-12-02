@@ -13,6 +13,7 @@ import del from 'del'
 import eslint from 'gulp-eslint'
 import gulp from 'gulp'
 import header from 'gulp-header'
+import imagemin from 'gulp-imagemin'
 import include from 'gulp-include'
 import pug from 'gulp-pug'
 import puglint from 'gulp-pug-lint'
@@ -22,6 +23,7 @@ import pkg from './package.json'
 import postcss from 'gulp-postcss'
 import rename from 'gulp-rename'
 import sass from 'gulp-sass'
+import scsslint from 'gulp-scss-lint'
 import sequence from 'run-sequence'
 import uglify from 'gulp-uglify'
 
@@ -197,6 +199,9 @@ gulp.task('images', () => {
     // Check for changes
     .pipe(changed(path.build + '/images'))
 
+    // Compress files
+    .pipe(imagemin())
+
     // Save files
     .pipe(gulp.dest(path.build + '/images'))
 })
@@ -307,7 +312,7 @@ gulp.task('scripts-lint', () => {
  * -----------------------------------------------------------------------------
  */
 
-gulp.task('styles', () => {
+gulp.task('styles',  [ 'styles-lint' ], () => {
   return gulp
 
     // Select files
@@ -345,6 +350,23 @@ gulp.task('styles', () => {
 
     // Save minified file
     .pipe(gulp.dest(path.build + '/styles'))
+})
+
+/**
+ * Lint styles
+ * -----------------------------------------------------------------------------
+ */
+
+gulp.task('styles-lint', () => {
+  return gulp
+
+    // Select files
+    .src([path.src + '/styles/**/*.scss', '!' + path.src + '/styles/core/_reset.scss'])
+
+    // Lint files
+    .pipe(scsslint({
+      'config': 'lint-scss.yml',
+    }))
 })
 
 /**

@@ -1,17 +1,16 @@
-/**
- * @component portfolio-item
- * @description Portfolio item component
- * -----------------------------------------------------------------------------
- */
+////
+/// @component portfolio-item
+/// @description Portfolio item component
+////
 
 .c-portfolio-item {
-  border-bottom: none;
+  border-bottom: 0;
   display: block;
   text-align: left;
   transition: all .2s linear;
 
   &:hover {
-    transform: translate(-2px,-2px);
+    transform: translate(-2px, -2px);
 
     .c-portfolio-item__content-title {
       color: map-get($colors, brand-1);
@@ -19,7 +18,7 @@
   } // &:hover
 
   .c-portfolio-item__figure {
-    border: none;
+    border: 0;
     margin: 0;
     padding: 0;
     position: relative;
@@ -28,8 +27,8 @@
 
   .c-portfolio-item__platform {
     background: map-get($colors, black);
-    border: none;
-    border-radius: 50% 0 50%;
+    border: 0;
+    border-radius: 50% 0;
     bottom: -25px;
     color: map-get($colors, white);
     height: 50px;
