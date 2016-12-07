@@ -7,24 +7,24 @@ block variables
 
 block content
   div(class='l-wrapper')
-    header(role='banner', class='l-header')
+    header(class='l-header')
       div(class='u-wrapper')
         a(href='/', title='Refresh webpage')
           h1(class='l-header__title') Eric Taylor
-        nav(role='navigation', class='l-header__navigation')
+        nav(class='l-header__navigation')
           h2(class='l-header__navigation-title') Primary navigation
           ul(class='l-header__navigation-list')
             li(class='l-header__navigation-list-item')
               a(href='#', title='View Intro section', class='l-header__navigation-link', data-anchor="c-intro") Home
             li(class='l-header__navigation-list-item')
-              a(href='#',, title='View Portfolio section' class='l-header__navigation-link', data-anchor="c-portfolio") Portfolio
+              a(href='#', title='View Portfolio section', class='l-header__navigation-link', data-anchor="c-portfolio") Portfolio
             li(class='l-header__navigation-list-item')
               a(href='#', title='View Experience section', class='l-header__navigation-link', data-anchor="c-experience") Experience
             li(class='l-header__navigation-list-item')
               a(href='#', title='View Contact section', class='l-header__navigation-link', data-anchor="c-social") Contact
         button(class='l-header__toggle-nav js-nav-toggle')
           span(class='l-header__toggle-nav-text') Toggle navigation
-    main(role='main', class='l-main', id='main')
+    main(class='l-main', id='main')
       div(class='c-intro')
         div(class='u-wrapper')
           h2(class='c-intro__title')
@@ -149,9 +149,9 @@ block content
               a(href='https://www.linkedin.com/in/ericbtaylorjr', title='View Eric\'s LinkedIn', class='c-social__link', target='_blank')
                 span(class='c-social__network-name') LinkedIn
                 i(class='fa fa-linkedin c-social__network-icon', aria-hidden='true')
-    footer(class='l-footer', role='contentinfo')
+    footer(class='l-footer')
       div(class='u-wrapper')
-        p(class='l-footer__text')
+        p(role='contentinfo', class='l-footer__text')
           | &copy; 
           script() document.write((new Date()).getFullYear())
           | . Built by 
