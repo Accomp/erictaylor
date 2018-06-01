@@ -1,0 +1,36 @@
+////
+/// Global variables
+////
+
+/// Breakpoints
+
+$breakpoints: (
+  sm: 640px,
+  med: 900px,
+  lg: 1400px
+);
+
+/// Colors
+
+$colors: (
+  black: #434a54,
+  gray: #aab2bd,
+  gray--light: #e6e9ed,
+  gray--dark: #434a54,
+  white: #fff,
+  brand-1: #79bd9a
+);
+
+/// Spacing
+
+$spacing: (
+  sm: 12px,
+  med: 30px,
+  lg: 42px
+);
+
+/// Fonts
+
+$fonts: (
+  sans-serif: "Open Sans",
+);

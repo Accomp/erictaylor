@@ -1,0 +1,54 @@
+////
+/// Global mixins
+////
+
+/// Media query: above horizontal breakpoint
+
+@mixin mq($breakpoint) {
+  @if $breakpoint == sm {
+    @media screen and (min-width: map-get($breakpoints, sm)) { @content; }
+  } @else if $breakpoint == med {
+    @media (min-width: map-get($breakpoints, med)) { @content; }
+  } @else if $breakpoint == lg {
+    @media (min-width: map-get($breakpoints, lg)) { @content; }
+  }
+}
+
+
+/// Media query: between horizontal breakpoints
+
+@mixin mq-between($breakpoint) {
+  @if $breakpoint == mobile {
+    @media screen and (min-width: 0) and (max-width: (map-get($breakpoints, med) - 1)) { @content; }
+  } @else if $breakpoint == tablet {
+    @media screen and (min-width: map-get($breakpoints, med)) and (max-width: (map-get($breakpoints, lg) - 1)) { @content; }
+  }
+}
+
+
+/// Clearfix
+
+@mixin clearfix() {
+  &:before,
+  &:after {
+    content: '';
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+
+/// Visually hide, stay in DOM
+
+@mixin visually-hide() {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px; width: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+}

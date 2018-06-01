@@ -1,45 +1,5 @@
-//
-// Settings
-// --------------------------------------------------
-
-@import 'settings/variables';
-@import 'settings/mixins';
-
-//
-// Core
-// --------------------------------------------------
-
-@import 'core/reset';
-@import 'core/base';
-
-//
-// Layout
-// --------------------------------------------------
-
-@import 'layout/footer';
-@import 'layout/header';
-@import 'layout/main';
-@import 'layout/wrapper';
-
-//
-// Utilities
-// --------------------------------------------------
-
-@import 'utilities/wrapper';
-
-//
-// Components
-// --------------------------------------------------
-
-@import 'components/button';
-@import 'components/intro';
-@import 'components/portfolio';
-@import 'components/portfolio-item';
-@import 'components/experience';
-@import 'components/social';
-
-//
-// Themes
-// --------------------------------------------------
-
-@import 'themes/christmas';
+@import 'variables';
+@import 'mixins';
+@import 'reset';
+@import 'base';
+@import 'utilities';

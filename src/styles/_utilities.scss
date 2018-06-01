@@ -1,0 +1,11 @@
+////
+/// Global utility classes
+////
+
+// Centering wrapper
+
+.u-wrapper {
+  margin: 0 auto;
+  max-width: 1000px;
+  padding: 0 map-get($spacing, med);
+} // .u-wrapper
