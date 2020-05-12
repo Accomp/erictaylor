@@ -2,8 +2,8 @@
   <div class="c-intro">
     <div class="u-wrapper">
       <h2 class="c-intro__title">
-        <span class="c-intro__title-accent">UI Manager. </span>
-        <br />Front-End Development.
+        <span class="c-intro__title-accent">Director of Software Development. </span>
+        <br />UI Engineering.
         <br />User Experience.
       </h2>
     </div><!-- /.u-wrapper -->
@@ -33,22 +33,22 @@ export default {
     .c-intro__title {
       border: 0;
       color: map-get($colors, white);
-      font-size: 3em; // 14 > 42
-      line-height: 1.428; // 42 > 60
+      font-size: 2em; // 14 > 28
+      line-height: 1.429; // 28 > 40
       margin: 0;
       padding: 0;
       text-shadow: 2px 2px 0 rgba(map-get($colors, black), .8);
 
       @include mq(sm) {
-        font-size: 3.857em; // 14 > 54
+        font-size: 2.5em; // 14 > 35
       } // mq.sm
 
       @include mq(med) {
-        font-size: 4.571em; // 14 > 64
+        font-size: 3.5em; // 14 > 49
       } // mq.sm
 
       @include mq(lg) {
-        font-size: 5.286em; // 14 > 74
+        font-size: 4em; // 14 > 56
       } // mq.lg
     } // .c-intro__title
 

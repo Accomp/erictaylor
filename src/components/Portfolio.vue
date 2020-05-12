@@ -6,7 +6,7 @@
       <p class="c-portfolio__description">Due to confidentiality agreements, Eric is prohibited to showcase some of his best work, particularly involving internal Design Systems. Please reach out for more details if interested.</p>
       <ul class="c-portfolio__list">
         <li class="c-portfolio__list-item" v-for="item in items" :key="item.title">
-          <a class="c-portfolio-item" :href="item.link" :title="item.link" target="_blank">
+          <component :is="tag(item)" class="c-portfolio-item" :href="item.link" :title="item.link" target="_blank">
             <figure class="c-portfolio-item__figure">
               <img class="c-portfolio-item__image" :src="item.imgPath" :alt="item.title" />
               <figcaption class="c-portfolio-item__platform">
@@ -18,7 +18,7 @@
               <h3 class="c-portfolio-item__content-title">{{ item.title }}</h3>
               <p class="c-portfolio-item__content-meta">{{ item.meta }}</p>
             </div><!-- /.c-portfolio-item__content -->
-          </a><!-- /.c-portfolio-item -->
+          </component><!-- /.c-portfolio-item -->
         </li><!-- /.c-portfolio__list-item -->
       </ul><!-- /.c-portfolio__list -->
     </div><!-- /.u-wrapper -->
@@ -46,29 +46,45 @@ export default {
     iconLaptop() {
       return faLaptop;
     },
+    tag(item) {
+      return item.active ? 'a' : 'div';
+    },
   },
   data() {
     return {
       items: [
         {
+          active: true,
           imgPath: '/images/work_blog-why-is-ui-management-important.jpg',
           link: 'https://www.linkedin.com/pulse/saas-engineering-why-ui-management-important-eric-taylor/',
           linkTitle: 'Read LinkedIn Article',
           meta: 'Blog Post',
           platformIcon: faFileAlt,
-          platformName: 'Website',
+          platformName: 'Blog Post',
           title: 'Why is UI Management important?',
         },
         {
+          active: false,
+          imgPath: '/images/work_youville.jpg',
+          link: 'http://visityouville.com/en/coloniallife/youville',
+          linkTitle: 'Due to confidentiality agreements, I cannot share this project.',
+          meta: 'HTML, CSS, VueJS, UX',
+          platformIcon: faLaptop,
+          platformName: 'Website',
+          title: 'Cofense Design System',
+        },
+        {
+          active: false,
           imgPath: '/images/work_blog-getting-into-fe.jpg',
           link: 'https://www.linkedin.com/pulse/getting-front-end-development-just-do-eric-taylor',
           linkTitle: 'Read LinkedIn Article',
           meta: 'Blog Post',
           platformIcon: faFileAlt,
-          platformName: 'Website',
+          platformName: 'Blog Post',
           title: 'Getting Into Front-End',
         },
         {
+          active: true,
           imgPath: '/images/work_youville.jpg',
           link: 'http://visityouville.com/en/coloniallife/youville',
           linkTitle: 'Visit Colonial Life Youville website',
@@ -78,6 +94,7 @@ export default {
           title: 'Colonial Life Youville',
         },
         {
+          active: true,
           imgPath: '/images/work_d3-transmog.jpg',
           link: 'http://d3.transmog.me',
           linkTitle: 'Visit Diablo Transmog website',
@@ -87,6 +104,7 @@ export default {
           title: 'Diablo Transmog',
         },
         {
+          active: true,
           imgPath: '/images/work_skull.jpg',
           link: 'http://codepen.io/EricTaylor/pen/meJWWM',
           linkTitle: 'Visit Animated Skull CodePen',
@@ -96,6 +114,7 @@ export default {
           title: 'Animated Skull',
         },
         {
+          active: true,
           imgPath: '/images/work_responsive-table.jpg',
           link: 'http://codepen.io/EricTaylor/pen/nzEHk',
           linkTitle: 'Visit Responsive Tables CodePen',

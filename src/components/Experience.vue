@@ -5,7 +5,7 @@
         <img class="c-experience__photo-image" src="/images/avatar.jpg" alt="Eric Taylor">
       </figure><!-- /.c-experience__photo -->
       <h2 class="c-experience__title">Experience</h2>
-      <p class="c-experience__intro">Eric has over 13 years of professional experience in Front-End Development and User Experience for websites and SaaS applications.</p>
+      <p class="c-experience__intro">Eric has over {{ yearsExperience }} years of professional experience in Front-End Development and User Experience for websites and SaaS applications.</p>
       <p class="c-experience__intro">He continuously strives to improve process-oriented development and lead shoulder-to-shoulder, with a strong emphasis on design systems.</p>
       <ol class="c-experience__list">
         <li class="c-experience__list-item" v-for="item in items" :key="item.name">
@@ -35,15 +35,28 @@ export default {
     iconFilePdf() {
       return faFilePdf;
     },
+    yearsExperience() {
+      const currentDate = new Date();
+      const currentYear = currentDate.getFullYear();
+      const firstYear = 2005;
+      return currentYear - firstYear;
+    },
   },
   data() {
     return {
       items: [
         {
-          description: 'is a human-focused phishing defense company. Eric is a Senior UI Engineer working on their flagship web application. He works closely with various teams in developing new features, leading UI vision, supporting internal clients, as well as building and maintaining a design system.',
+          description: 'is a user-focused bank. Eric is the Director of Software Engineering, leading cross-functional agile scrum teams to develop new features, maintain the existing React SPA, as well as enhance the internal design system. Also responsible for Engineer growth and providing support for roadmap planning and delivery.',
+          link: 'http://www.ally.com',
+          linkText: 'Visit the Ally website',
+          meta: 'Charlotte, NC (Aug 2019 - Present)',
+          name: 'Ally',
+        },
+        {
+          description: 'is a human-focused phishing defense company. Eric was the Lead UI Engineer, working on their flagship VueJS web application and supporting the rest of the suite. He worked closely with various teams in developing new features, leading UI vision, supporting internal clients, as well as building and maintaining a design system.',
           link: 'http://www.cofense.com',
           linkText: 'Visit the Cofense website',
-          meta: 'Remote (Aug 2015 - Present)',
+          meta: 'Remote (Aug 2015 - Aug 2019)',
           name: 'Cofense',
         },
         {

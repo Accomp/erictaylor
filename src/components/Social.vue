@@ -1,7 +1,7 @@
 <template>
   <section class="c-social">
     <div class="u-wrapper">
-      <h2 class="c-social__title">Let's Chat</h2>
+      <h2 class="c-social__title">Let's Chat!</h2>
       <ul class="c-social__list">
         <li class="c-social__list-item" v-for="item in items" :key="item.text">
           <a class="c-social__link" :href="item.link" target="_blank" title="item.title">
@@ -41,7 +41,7 @@ export default {
       items: [
         {
           icon: faEnvelope,
-          link: 'mailto:exaltedsolutions@gmail.com',
+          link: 'mailto:eric@etaylor.io',
           text: 'Email',
           title: 'Send an email to Eric',
         },
